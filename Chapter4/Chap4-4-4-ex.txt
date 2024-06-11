@@ -33,6 +33,7 @@ FROM
 	access_log
 ;
 
+
 〇変更前
 +--------+---------+---------+------------+-------------+
 | log_id | page_id | referer | ip_address | access_date |
