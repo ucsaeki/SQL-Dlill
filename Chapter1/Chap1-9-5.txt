@@ -1,0 +1,24 @@
+×誤り
+SELECT
+	page_id,
+	SUM(*)
+FROM
+	access_log
+ORDER BY
+	page_id
+;
+
+①SUM(*)→COUNT(*)
+SUM関数ではなくCOUNT関数でaccess_logテーブルが作成された個数を数えることで累計のアクセス回数を求める。
+②ORDER→GROUP
+ソートを行うためのORDER句ではなく、グルーピングのためのGROUP句を使用する
+
+〇訂正
+SELECT
+	page_id,
+	COUNT(*)
+FROM
+	access_log
+GROUP BY
+	page_id
+;

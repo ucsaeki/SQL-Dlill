@@ -1,0 +1,18 @@
+×誤り
+SELECTS
+	title
+	publish
+FROM
+	books
+;
+
+①SELECT句が「SELECTS」になっている。
+②複数の列を同時に指定しているが、「,」で区切っていない。
+
+〇訂正
+SELECT
+	title,
+	publish
+FROM
+	books
+;

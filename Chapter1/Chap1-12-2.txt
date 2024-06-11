@@ -1,0 +1,13 @@
+SELECT
+	prefecture,
+	MAX(age)
+FROM
+	quest
+WHERE
+	sex = '男'
+GROUP BY
+	prefecture
+HAVING
+	/*60歳より上の人物*/
+	MAX(age) > 60
+;

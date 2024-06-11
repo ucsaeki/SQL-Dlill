@@ -1,0 +1,8 @@
+UPDATE
+	books
+SET
+	/*0.1は10%オフの価格を求めるために使用*/
+	price = price - price * 0.1
+WHERE
+	publish = '日経BP'
+;

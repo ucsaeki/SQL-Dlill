@@ -1,0 +1,12 @@
+SELECT
+	name,
+	answer1,
+	answer2
+FROM
+	quest
+ORDER BY
+	answered DESC
+LIMIT
+	/*先頭から10行分*/
+	0,10
+;

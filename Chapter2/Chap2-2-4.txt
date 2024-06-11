@@ -1,0 +1,19 @@
+SELECT
+	CONCAT(e.l_name,e.f_name) AS 社員氏名,
+	AVG(t.work_time) AS 勤務時間平均
+FROM
+	employee AS e
+LEFT JOIN
+	time_card AS t
+ON
+	e.s_id = t.s_id
+WHERE
+		/*勤務時間のデータが存在する*/
+		work_time >= 0
+	OR
+		work_time IS NULL
+GROUP BY
+	e.s_id
+ORDER BY
+	AVG(t.work_time) DESC
+;

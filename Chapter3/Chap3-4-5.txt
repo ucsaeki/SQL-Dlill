@@ -1,0 +1,17 @@
+×誤り
+UPDATE INTO
+	quest
+VALUES
+	sex=REPLACE(sex,'性','')
+;
+①UPDATE INTO→UPDATE
+変更はUPDATE句で行う。
+②VALUES→SET
+「UPDATE～SET…」によって情報を更新する。
+
+〇訂正
+UPDATE
+	quest
+SET
+	sex=REPLACE(sex,'性','')
+;

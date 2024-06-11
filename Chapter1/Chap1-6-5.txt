@@ -1,0 +1,34 @@
+×誤り
+SELECT
+	isbn,
+	title
+FROM
+	books
+WHERE
+		publish = '秀和システム'
+	AND
+		publish = '日経BP'
+	OR
+		price < 3000
+;
+①AND→OR、また、OR→AND
+「秀和システムまたは日経BP」を満たすのはORである。また、「どちらかの出版社かつ3000円未満」を満たすのはANDである。
+②ORでつないだ出版社をカッコでくくる。
+このままでは「秀和システム」「または日経BPかつ3000円未満」になってしまうため、カッコを用いて「秀和システムまたは日経BP」「かつ3000円未満」に区切る必要がある。
+
+〇訂正
+SELECT
+	isbn,
+	title
+FROM
+	books
+WHERE
+	(
+		publish = '秀和システム'
+	OR
+		publish = '日経BP'
+	)
+	AND
+		/*値段が3000円未満*/
+		price < 3000
+;

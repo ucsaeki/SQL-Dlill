@@ -1,0 +1,18 @@
+×誤り
+ALTER TABLE
+	access_log
+MODIFY WITH
+	referer, VARCHAR(200),NULL
+;
+
+①MODIFY WITH→MODUFY
+列の定義変更はMODIFY句によって行う
+②referer, VARCHAR(200), NULL→referer VARCHAR(200) NULL
+列の定義を設定する際、同一の列に対する変更ではカンマを使用しない
+
+〇訂正
+ALTER TABLE
+	access_log
+MODIFY
+	referer VARCHAR(200) NULL
+;

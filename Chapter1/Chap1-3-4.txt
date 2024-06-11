@@ -1,0 +1,16 @@
+×誤り
+SELECT ALL
+	class,
+	depart_id
+FROM
+	employee
+;
+①重複なしの役職を取り出したいならALLではなくDISTINCTを用いる。
+②重複なしの役職のみを取り出したいため、depart_idを不必要に指定しない。
+
+〇訂正
+SELECT DISTINCT
+	class
+FROM
+	employee
+;

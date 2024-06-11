@@ -1,0 +1,25 @@
+×誤り
+UPDATE
+	rental
+SET
+	rental_date CURRENT_DATE
+WHERE
+		user_id ='B200405'
+	OR
+		isbn = '4-0010-0000-1'
+;
+①rental_date CURRENT_DATE→rental_date = CURRENT_DATE
+=演算子でつなぐことで変更を代入できる
+②OR→AND
+問題文的に二つの条件をどちらも満たしていることが必要なので、条件をANDでつなぐ
+
+〇訂正
+UPDATE
+	rental
+SET
+	rental_date = CURRENT_DATE
+WHERE
+		user_id ='B200405'
+	AND
+		isbn = '4-0010-0000-1'
+;

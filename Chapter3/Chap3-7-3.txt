@@ -1,0 +1,7 @@
+DELETE FROM
+	employee
+WHERE
+	last_update < '2007-03-31'
+AND
+	retired = 1
+;

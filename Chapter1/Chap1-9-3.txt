@@ -1,0 +1,8 @@
+SELECT
+	s_id,
+	sum(s_value)
+FROM
+	sales
+GROUP BY
+	s_id
+;

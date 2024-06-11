@@ -1,0 +1,48 @@
+CREATE TABLE
+	access_log
+	(
+	log_id INT NOT NULL,
+	page_id CHAR(5),
+	referer VARCHAR(255),
+	ip_address CHAR(15),
+	access_date DATETIME,
+	PRIMARY KEY (log_id)
+	)
+;
+
+INSERT INTO
+	access_log
+	(
+		log_id
+	)
+VALUES
+	(
+		''
+	)
+;
+
+ALTER TABLE
+	access_log
+MODIFY
+	referer VARCHAR(10) NOT NULL
+;
+
+SELECT
+	*
+FROM
+	access_log
+;
+
+〇変更前
++--------+---------+---------+------------+-------------+
+| log_id | page_id | referer | ip_address | access_date |
++--------+---------+---------+------------+-------------+
+|      0 | NULL    |         | NULL       | NULL        |
++--------+---------+---------+------------+-------------+
+
+〇変更後
++--------+---------+---------+------------+-------------+
+| log_id | page_id | referer | ip_address | access_date |
++--------+---------+---------+------------+-------------+
+|      0 | NULL    | NULL    | NULL       | NULL        |
++--------+---------+---------+------------+-------------+

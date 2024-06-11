@@ -1,0 +1,15 @@
+SELECT
+	author_id AS 著者ID,
+	COUNT(*) AS カウント数,
+	CASE
+		/*冊数が4冊以上*/
+		WHEN COUNT(*) >= 4 THEN '多い'
+		/*冊数が2冊以上4冊未満*/
+		WHEN COUNT(*) >= 2 THEN '普通'
+		ElSE '少ない'
+	END AS 評価
+FROM
+	author_books
+GROUP BY
+	author_id	
+;

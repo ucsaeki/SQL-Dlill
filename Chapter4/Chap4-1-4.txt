@@ -1,0 +1,12 @@
+CREATE TABLE
+	books
+	(
+	isbn CHAR(17) NOT NULL,
+	title VARCHAR(255),
+	price INT,
+	publish VARCHAR(30),
+	publishu_date DATE,
+	category_id CHAR(5),
+	PRIMARY KEY(isbn)
+	)
+;

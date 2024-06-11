@@ -1,0 +1,11 @@
+SELECT
+	title,
+	publish_date
+FROM
+	books
+ORDER BY
+	publish_date DESC
+LIMIT
+	/*3件目から5件分*/
+	2,5
+;

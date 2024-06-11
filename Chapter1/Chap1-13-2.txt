@@ -1,0 +1,16 @@
+SELECT
+	isbn,
+	COUNT(*) AS 貸出数,
+	CASE
+		/*貸出回数が10回以上の場合*/
+		WHEN COUNT(*) >= 10 THEN '好評'
+		/*貸出回数が5回以上10回未満の場合*/
+		WHEN COUNT(*) >= 5 THEN '普通'
+		ELSE '不評'
+	END AS 評価
+	
+FROM
+	rental
+GROUP BY
+	isbn
+;

@@ -1,0 +1,26 @@
+×誤り
+SELECT
+	*
+FROM
+	access_log
+WHERE
+	access_date IN ('2013-01-01','2013-01-31')
+ORDER BY
+	referer, ip_address DESC
+;
+①IN→BETWEEN
+IN句は「AとBのどちらか」であるため、「AからBまでの間」を指定する場合BETWEEN句が適している。
+②referer→referer DESC,
+複数の条件でソートを行う場合、それぞれソートの形式を指定する必要がある。
+
+〇訂正
+SELECT
+	*
+FROM
+	access_log
+WHERE
+	access_date BETWEEN '2013-01-01' AND '2013-01-31'
+ORDER BY
+	referer DESC,
+	ip_address DESC
+;

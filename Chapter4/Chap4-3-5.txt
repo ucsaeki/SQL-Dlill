@@ -1,0 +1,22 @@
+×誤り
+ALTER TABLE
+	employee
+ADD TO
+	email VARCHAR(255) NOT NULL
+BEFORE
+	depart_id
+;
+
+①ADD TO→ADD
+追加する列の内容を記入する場合ADDを使用する
+②BEFORE→AFTER
+追加したい箇所の指定は、既存の列の後ろの場合AFTER、先頭の場合FIRSTで指定する。
+
+〇訂正
+ALTER TABLE
+	employee
+ADD
+	email VARCHAR(255) NOT NULL
+AFTER
+	depart_id
+;

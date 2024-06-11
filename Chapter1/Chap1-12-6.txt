@@ -1,0 +1,15 @@
+SELECT
+	referer,
+	COUNT(*)
+FROM
+	access_log
+WHERE
+	access_date >= '2013-01-01'
+GROUP BY
+	referer
+Having
+	/*アクセス数が5件未満*/
+	COUNT(*) < 5
+ORDER BY
+	COUNT(*) DESC
+;

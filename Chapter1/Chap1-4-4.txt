@@ -1,0 +1,10 @@
+SELECT
+	name,
+	sex,
+	prefecture
+FROM
+	quest
+WHERE
+	/*年齢が30歳以上40歳未満(39歳以下)の人物の情報を取得*/
+	age BETWEEN 30 AND 39
+;

@@ -1,0 +1,34 @@
+×誤り
+SELECT
+	depart_id,
+	COUNT(*)
+FROM
+	employee
+WHERE
+	sex = 2
+ORDER BY
+	depart_id
+WHERE
+	COUNT(*) >= 3
+;
+①ORDER→GROUP
+ORDERはソートの際に使用する。所属部署でグルーピングしたいので、GROUPを使用する。
+②WHERE→HAVING
+求めたい数値の条件指定にはHAVINGを用いる。
+
+
+〇訂正
+SELECT
+	depart_id,
+	COUNT(*)
+FROM
+	employee
+WHERE
+	/*性別が女性であることを表す*/
+	sex = 2
+GROUP BY
+	depart_id
+HAVING
+	/*所属人数が3人以上*/
+	COUNT(*) >= 3
+;

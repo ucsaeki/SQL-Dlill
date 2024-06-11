@@ -1,0 +1,13 @@
+SELECT
+	publish,
+	category_id,
+	COUNT(*)
+FROM
+	books
+GROUP BY
+	publish,
+	category_id
+HAVING
+	/*登録数が3未満*/
+	COUNT(*) < 3
+;

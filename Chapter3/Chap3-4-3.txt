@@ -1,0 +1,6 @@
+UPDATE
+	product
+SET
+	/*1.1は10%値上げするために使用*/
+	price = price * 1.1
+;

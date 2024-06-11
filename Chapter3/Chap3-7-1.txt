@@ -1,0 +1,8 @@
+DELETE FROM
+	rental
+WHERE
+	rental_date <= '2011-12-31'
+AND
+	/*1は返却済みであることを表す*/
+	returned = 1
+;

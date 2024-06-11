@@ -1,0 +1,22 @@
+×誤り
+DELETE
+	books
+WHERE
+		category_id = 'z9999'
+	AND
+		category_id IS NULL
+;
+①DELETE →DELETE FROM
+削除する行を指定するのはDELETE FROM
+②AND→OR
+同じ対象が「'z9999'かつNULL」というのはあり得ない。問題文的にもどちらかが合致している場合なのでORを使用する
+
+〇訂正
+	×誤り
+DELETE FROM
+	books
+WHERE
+		category_id = 'z9999'
+	OR
+		category_id IS NULL
+;

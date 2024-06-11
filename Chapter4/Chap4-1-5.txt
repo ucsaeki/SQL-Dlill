@@ -1,0 +1,27 @@
+×誤り
+CREATE TABLE INTO
+	rental
+	(
+		id INT AUTO_INCREMENT, PRIMARY KEY,
+		user_id CHAR(7),
+		isbn CHAR(13),
+		rental_date DATE,
+		returned SMALLINT DEFAULT 0
+	)
+;
+①CREATE TABLE INTO→CREATE TABLE
+テーブル作成にはCREATE TABLEを使用する。
+②, PRIMARY KEY→PRIMARY KEY
+プライマリーキーを列フラグで設定する場合、カンマは必要ない
+〇訂正
+CREATE TABLE
+	rental
+	(
+		id INT AUTO_INCREMENT PRIMARY KEY,
+		user_id CHAR(7),
+		isbn CHAR(13),
+		rental_date DATE,
+		/*初期値0は貸出中を意味する*/
+		returned SMALLINT DEFAULT 0
+	)
+;

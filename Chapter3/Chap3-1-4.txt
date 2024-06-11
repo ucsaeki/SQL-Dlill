@@ -1,0 +1,26 @@
+×誤り
+INSERT
+	product
+VALUES
+	(
+	SB00000001,
+	黒スタンプ,
+	1250
+	)
+;
+
+①INSERT→INSERT INTO
+挿入のための句はINSERT INTOである。
+②SB00000001,黒スタンプ→'SB00000001','黒スタンプ'
+文字列は「'」でくくる必要がある
+
+〇訂正
+INSERT INTO
+	product
+VALUES
+	(
+	'SB00000001',
+	'黒スタンプ',
+	1250
+	)
+;

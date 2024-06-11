@@ -1,0 +1,20 @@
+CREATE TABLE
+	product
+	(
+		po_id INT NOT NULL,
+		p_name VARCHAR(255) NOT NULL,
+		price INT,
+		PRIMARY KEY(po_id)
+	)
+;
+
+SHOW INDEX FROM
+	product
+;
+
++---------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table   | Non_unique | Key_name    | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++---------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| product |          0 | PRIMARY     |            1 | po_id       | A         |           0 |     NULL | NULL   |      | BTREE      |         |               |
+| product |          1 | ind_product |            1 | p_name      | A         |           0 |     NULL | NULL   |      | BTREE      |         |               |
++---------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+

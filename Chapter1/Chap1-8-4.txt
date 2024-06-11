@@ -1,0 +1,30 @@
+×誤り
+SELECT
+	page_id,
+	referer,
+	ip_address
+FROM
+	access_log
+ORDER BY
+	access_date ASC
+LIMIT
+	10,0
+;
+①ASC→DESC
+昇順ソートではアクセス日の古い順に表示されるため、アクセス日の新しい順に表示するためには降順ソートを行う。
+②10,0→0,10
+「10,0」は「先頭から10番目を0件表示」の意味になってしまうため、「先頭から10件表示」の意味を持つ「0,10」に変更
+
+〇訂正
+SELECT
+	page_id,
+	referer,
+	ip_address
+FROM
+	access_log
+ORDER BY
+	access_date DESC
+LIMIT
+	/*先頭から10行分*/
+	0,10
+;

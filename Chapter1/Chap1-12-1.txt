@@ -1,0 +1,11 @@
+SELECT
+	prefecture,
+	AVG(age)
+FROM
+	quest
+GROUP BY
+	prefecture
+HAVING
+	/*35歳以上49歳以下(50歳未満)*/
+	AVG(age) BETWEEN 35 AND 49
+;

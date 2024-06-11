@@ -1,0 +1,28 @@
+×誤り
+CREATE INDEX
+	ind_usr
+IN
+	usr
+	(
+		prefecture
+		city
+		o_address
+	)
+;
+
+①IN→ON
+「ON～」によって作成するインデックスのテーブルを指定する
+②prefecture city→prefecture,city,
+インデックスのキーを羅列する場合、カンマで区切る必要がある
+
+〇訂正
+CREATE INDEX
+	ind_usr
+ON
+	usr
+	(
+		prefecture,
+		city,
+		o_address
+	)
+;

@@ -1,0 +1,28 @@
+CREATE TABLE
+	usr
+	(
+		user_id CHAR(7),
+		l_name VARCHAR(20),
+		f_name VARCHAR(20),
+		l_name_kana VARCHAR(100),
+		f_name_kana VARCHAR(100),
+		prefecture VARCHAR(15),
+		city VARCHAR(20),
+		o_address VARCHAR(100),
+		tel VARCHAR(20),
+		email VARCHAR(255),
+		PRIMARY KEY (user_id)
+	)
+;
+
+SHOW INDEX FROM
+	usr
+;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| usr   |          0 | PRIMARY  |            1 | user_id     | A         |           0 |     NULL | NULL   |      | BTREE      |         |               |
+| usr   |          1 | ind_usr  |            1 | prefecture  | A         |           0 |     NULL | NULL   | YES  | BTREE      |         |               |
+| usr   |          1 | ind_usr  |            2 | city        | A         |           0 |     NULL | NULL   | YES  | BTREE      |         |               |
+| usr   |          1 | ind_usr  |            3 | o_address   | A         |           0 |     NULL | NULL   | YES  | BTREE      |         |               |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+

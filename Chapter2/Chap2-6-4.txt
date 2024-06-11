@@ -1,0 +1,33 @@
+×誤り
+	SELECT
+		a.name_kana
+	FROM
+		author AS a
+UNION ALL
+	SELECT
+		u.l_name_kana,
+		u.f_name_kana
+	FROM
+		usr AS u
+ORDER BY
+	1 DESC
+;
+
+①UNION ALL→UNION
+重複を含まないという条件のため、自動で重複を除去しないUNION ALLは不適
+②u.l_name_kana,u.f_name_kana→CONCAT(u.l_name_kana,u.f_name_kana)
+UNION句でつなぐSELECT対象の個数は同じである必要があるため、氏と名を合体させて1行にする必要がある
+
+〇訂正
+	SELECT
+		a.name_kana
+	FROM
+		author AS a
+UNION
+	SELECT
+		CONCAT(u.l_name_kana,u.f_name_kana)
+	FROM
+		usr AS u
+ORDER BY
+	1 DESC
+;

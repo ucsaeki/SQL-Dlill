@@ -1,0 +1,29 @@
+×誤り
+SELECT
+	prefecture,
+	sex,
+	age,
+	AVG(answer1) IS 評価平均
+FROM
+	quest
+GROUP BY
+	prefecture,
+	sex
+;
+
+①age→削除
+都道府県、性別ごとの評価平均を求めるために不必要な項目を表示している。仮に年齢の項目を付けるなら、グルーピングして平均値を出すべきである。
+②IS 評価平均 → AS '評価平均'
+列に新たな名前を付けるのはASキーワードの働きである。
+
+〇訂正
+SELECT
+	prefecture,
+	sex,
+	AVG(answer1) AS '評価平均'
+FROM
+	quest
+GROUP BY
+	prefecture,
+	sex
+;

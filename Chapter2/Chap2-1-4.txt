@@ -1,0 +1,19 @@
+SELECT
+	CONCAT(u.l_name,u.f_name),
+	/*未返却の数の合計*/
+	COUNT(r.returned = 0)
+FROM
+	rental AS r
+INNER JOIN
+	usr AS u
+ON
+	r.user_id = u.user_id
+WHERE
+	/*未返却の状態*/
+	r.returned = 0
+GROUP BY
+    r.user_id
+ORDER BY
+	/*未返却の数の合計を降順ソート*/
+	COUNT(r.returned = 0) DESC
+;

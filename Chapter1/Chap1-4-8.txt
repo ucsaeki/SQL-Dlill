@@ -1,0 +1,25 @@
+×誤り
+SELECT
+	title
+	publish
+	price
+
+FROM
+	books
+WHERE
+	price <= 5000
+;
+①取り出したい列の列挙の際に「,」を使用して区切っていない。
+②5000円未満指定のはずだが、「<=」では以上になってしまう。
+
+〇訂正
+SELECT
+	title,
+	publish,
+	price
+FROM
+	books
+WHERE 
+	/*値段が5000円未満の情報を取得*/
+	price < 5000
+;

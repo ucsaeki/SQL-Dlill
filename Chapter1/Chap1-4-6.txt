@@ -1,0 +1,9 @@
+SELECT
+	user_id,
+	isbn
+FROM
+	rental
+WHERE
+	/*貸出中であることを表す0が入力されている情報を取得*/
+	returned = 0
+;

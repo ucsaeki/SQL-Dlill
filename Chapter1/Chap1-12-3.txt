@@ -1,0 +1,11 @@
+SELECT
+	author_id,
+	COUNT(*)
+FROM
+	author_books
+GROUP BY
+	author_id
+HAVING
+	/*3冊以上を刊行している人*/
+	COUNT(author_id) >= 3
+;

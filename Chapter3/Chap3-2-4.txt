@@ -1,0 +1,38 @@
+×誤り
+INSERT INTO
+	employee
+	(
+		s_id
+		l_name
+		depart_id
+		last_update
+	)
+VALUE
+	(
+		'WA00001',
+		'和田',
+		'J01',
+		CURRENT_DATE
+	)
+;
+①s_id l_name depart_id→s_id, l_name, depart_id,
+挿入する列名を列挙する場合、「,」で区切ることが必要
+②VALUE→VALUES
+挿入内容の記載はVALUES句で行う
+〇訂正
+INSERT INTO
+	employee
+	(
+		s_id,
+		l_name,
+		depart_id,
+		last_update
+	)
+VALUES
+	(
+		'WA00001',
+		'和田',
+		'J01',
+		CURRENT_DATE
+	)
+;

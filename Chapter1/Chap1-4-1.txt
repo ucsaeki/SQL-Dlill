@@ -1,0 +1,9 @@
+SELECT
+	answer1,
+	answer2
+FROM
+	quest
+WHERE
+	/*年齢が20歳以上の情報を取得*/
+	age>=20
+;
