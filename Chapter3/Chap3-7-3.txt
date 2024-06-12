@@ -3,5 +3,6 @@ DELETE FROM
 WHERE
 	last_update < '2007-03-31'
 AND
+	/*1は退職済みを表す*/
 	retired = 1
 ;

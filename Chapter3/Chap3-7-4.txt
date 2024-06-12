@@ -2,9 +2,9 @@
 DELETE
 	books
 WHERE
-		category_id = 'z9999'
-	AND
-		category_id IS NULL
+	category_id = 'Z9999'
+AND
+	category_id IS NULL
 ;
 ①DELETE →DELETE FROM
 削除する行を指定するのはDELETE FROM
@@ -16,7 +16,7 @@ WHERE
 DELETE FROM
 	books
 WHERE
-		category_id = 'z9999'
-	OR
-		category_id IS NULL
+	category_id = 'Z9999'
+OR
+	category_id IS NULL
 ;

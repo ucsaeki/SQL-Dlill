@@ -3,14 +3,14 @@ UPDATE
 SET
 	category_id = 'XXXXX'
 WHERE
-	isbn
-	IN
+	isbn IN
 		(
 		SELECT
 			isbn
 		FROM
 			rental
 		WHERE
+			/*9は紛失を表す*/
 			returned = 9
 		)
 ;

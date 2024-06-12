@@ -1,15 +1,14 @@
 DELETE FROM
 	books
 WHERE
-	isbn
-IN
+	isbn IN
 	(
-	SELECT
-		isbn
-	FROM
-		rental
-	WHERE
-		/*9は紛失したことを表す*/
-		returned = 9
+		SELECT
+			isbn
+		FROM
+			rental
+		WHERE
+			/*9は紛失したことを表す*/
+			returned = 9
 	)
 ;

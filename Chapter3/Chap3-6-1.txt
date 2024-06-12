@@ -3,8 +3,7 @@ UPDATE
 SET
 	depart_id = 'Z99'
 WHERE
-	depart_id
-NOT IN
+	depart_id NOT IN
 	(
 		SELECT
 			depart_id

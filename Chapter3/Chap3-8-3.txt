@@ -3,11 +3,11 @@ DELETE FROM
 WHERE
 	NOT EXISTS
 	(
-	SELECT
-		shop.s_id
-	FROM
-		shop
-	WHERE
-		shop.s_id = sales.s_id
+		SELECT
+			shop.s_id
+		FROM
+			shop
+		WHERE
+			shop.s_id = sales.s_id
 	)
 ;
