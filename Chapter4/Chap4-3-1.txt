@@ -1,9 +1,10 @@
 ALTER TABLE
 	books
 ADD
+	/*0はページ数の初期値*/
 	pages INT DEFAULT 0,
 ADD
 	rating CHAR(1) DEFAULT 'B' NOT NULL
 AFTER
-	category_id
+	pages
 ;

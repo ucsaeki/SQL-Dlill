@@ -1,11 +1,13 @@
 CREATE TABLE
 	sales
 	(
-	s_id CHAR(5) NOT NULL,
-	s_date DATE NOT NULL,
-	s_value INT DEFAULT 0
+		s_id CHAR(5) NOT NULL,
+		s_date DATE NOT NULL,
+		/*0は売上の初期値*/
+		s_value INT DEFAULT 0
 	)
 ;
+
 
 ALTER TABLE
 	sales
